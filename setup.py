@@ -6,12 +6,12 @@ with open('README.md', 'r') as f:
 
 setup(
         name='pgbtool',
-        version='0.1',
+        version='1.0',
         author='Amine Rostane',
         author_email='amine.rostane@outlook.com',
         description='CLI backup tool for PostgreSQL databases',
         long_description=long_description,
-        url='',
+        url='https://github.com/amineross/pgbtool.git',
         packages=find_packages('src'),
         package_dir={'': 'src'},
         install_requires=['boto3'],

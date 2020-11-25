@@ -1,6 +1,7 @@
 from argparse import ArgumentParser, Action
 import sys
 
+# Handling double arguments
 class driver_action(Action):
 
     def __call__(self, parser, driver, destination, namespace, values, option_strings=None):
@@ -31,10 +32,10 @@ def main():
     dump = pgdump.dump(args.url)
 
     if args.driver == 's3':
-        client = boto3.client('s3')
+        client = boto3.client('s3') # Initialising boto3 client
         print(f"Backing up to {args.destination} from S3 bucket")
-        storage.s3(client, dump.stdout, args.destination, 'backup.sql')
+        storage.s3(client, dump.stdout, args.destination, 'backup.sql') # Backing up to destination/backup.sql
     else:
         print(f"Backing up locally to {args.destination}")
         outfile = open(args.destination, 'wb')
-        storage.local(dump.stdout, outfile)
+        storage.local(dump.stdout, outfile) # Backing up locally
