@@ -6,7 +6,7 @@ CLI Backup tool for PostgreSQL Databases either to S3 Buckets or Locally.
 
 1) Clone the following link :
 ~~~
-$ git clone www.github.com/project_setup
+$ git clone https://github.com/amineross/pgbtool.git
 ~~~
 2) Run setup.py
 ~~~
